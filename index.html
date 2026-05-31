@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Pricing Cards</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: tahoma;
+    }
+
+    body{
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background:
+        linear-gradient(rgba(2, 6, 23, 0.55), rgba(2, 6, 23, 0.55)),
+        url(img/back.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 20px;
+    }
+
+    .container{
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card{
+      width: 300px;
+      height: 400px;
+      position: relative;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.10);
+      backdrop-filter: blur(18px);
+      padding: 30px;
+      color: #F8FAFC;
+      transition: 0.4s ease;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .card:hover{
+      transform: scale(1.05);
+      top: -25px;
+      box-shadow: 0 0 60px 18px rgba(56, 189, 248, 0.35);
+      border-color: #38BDF8;
+    }
+
+    .badge{
+      position: absolute;
+      top: 40px;
+      left: 30px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #38BDF8;
+      letter-spacing: 1px;
+    }
+
+    .card h1{
+      margin-top: 70px;
+      font-size: 28px;
+      color: #FFFFFF;
+    }
+
+    .card ul{
+      margin-top: 25px;
+      list-style: none;
+    }
+
+    .card ul li{
+      margin: 12px 0;
+      color: #E2E8F0;
+      font-size: 16px;
+    }
+
+    .btn{
+      margin-top: 30px;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 40px;
+      background: linear-gradient(135deg, #38BDF8, #0EA5E9);
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        width: 90%;
+        max-width: 350px;
+        height: auto;
+        margin-bottom: 30px;
+      }
+
+      .card:hover {
+        transform: scale(1);
+        top: 0;
+      }
+
+      .badge {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 20px;
+      }
+
+      .card h1 {
+        margin-top: 60px;
+        font-size: 24px;
+      }
+
+      .card ul li {
+        font-size: 15px;
+      }
+
+      .btn {
+        padding: 10px;
+        font-size: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 10px;
+      }
+      .card {
+        width: 100%;
+        padding: 20px;
+      }
+      .card h1 {
+        font-size: 22px;
+      }
+      .card ul li {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="card">
+      <div class="badge">MOST POPULAR</div>
+      <h1>Basic</h1>
+      <ul>
+        <li>1 GB Storage</li>
+        <li>10 Projects</li>
+        <li>Email Support</li>
+      </ul>
+      <button class="btn">Buy Now</button>
+    </div>
+
+    <div class="card">
+      <div class="badge">MOST POPULAR</div>
+      <h1>Pro</h1>
+      <ul>
+        <li>10 GB Storage</li>
+        <li>100 Projects</li>
+        <li>Priority Support</li>
+      </ul>
+      <button class="btn">Buy Now</button>
+    </div>
+
+    <div class="card">
+      <div class="badge">MOST POPULAR</div>
+      <h1>Premium</h1>
+      <ul>
+        <li>100 GB Storage</li>
+        <li>Unlimited Projects</li>
+        <li>24/7 Support</li>
+      </ul>
+      <button class="btn">Buy Now</button>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+
