@@ -104,7 +104,7 @@
     .signature{
   position: fixed;
   top: 20px;
-  right: 20px;
+  left: 20px;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -114,7 +114,11 @@
   box-shadow: 0 8px 20px rgba(183, 107, 255, 0.35);
   border: 1px solid rgba(255, 255, 255, 0.2);
   z-index: 9999;
+  transition:all ease 2s;
       }
+    .signature:hover{
+      transform:scale(1.2); 
+    }
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
